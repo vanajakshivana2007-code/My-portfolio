@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Dashboard | RythuConnect</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav container"><a class="logo" href="index.html"><span class="logo-mark">RC</span> RythuConnect</a><div class="nav-links"><a href="marketplace.html">Marketplace</a><a href="weather.html">Weather</a><a href="orders.html">Orders</a></div><div class="nav-actions"><button class="icon-btn" id="darkToggle">Theme</button><button class="ghost-btn" onclick="logout()">Logout</button></div></nav></header>
+  <main class="dashboard-shell">
+    <aside class="sidebar">
+      <a class="active" href="#overview">Overview</a>
+      <a href="#add">Add Product</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#profile">Profile</a>
+    </aside>
+    <section class="dashboard-main">
+      <div class="dashboard-header">
+        <div><h1>Farmer Dashboard</h1><p class="muted">Welcome, <span data-user-name>Farmer</span>. Manage crop listings and sales insights.</p></div>
+        <a class="primary-btn" href="marketplace.html">View Marketplace</a>
+      </div>
+      <div class="dashboard-grid" id="overview">
+        <article class="dashboard-card"><span>Total Sales</span><strong>Rs 45,000</strong></article>
+        <article class="dashboard-card"><span>Active Listings</span><strong>18</strong></article>
+        <article class="dashboard-card"><span>Pending Orders</span><strong>7</strong></article>
+        <article class="dashboard-card"><span>Avg Rating</span><strong>4.8</strong></article>
+      </div>
+      <div class="admin-grid" style="margin-top:22px">
+        <section class="panel" id="add">
+          <h2>Add Product</h2>
+          <form class="form-stack" id="addProductForm">
+            <div class="field"><label>Crop Name</label><input name="name" required placeholder="Green Gram"></div>
+            <div class="field"><label>Price</label><input name="price" type="number" required placeholder="80"></div>
+            <div class="field"><label>Unit</label><select name="unit"><option>kg</option><option>quintal</option><option>box</option></select></div>
+            <div class="field"><label>Category</label><select name="category"><option>Vegetables</option><option>Grains</option><option>Spices</option><option>Fiber</option><option>Fruits</option></select></div>
+            <div class="field"><label>District</label><input name="location" required placeholder="Guntur"></div>
+            <div class="field"><label>Stock</label><input name="stock" type="number" required placeholder="120"></div>
+            <div class="field"><label>Image URL</label><input name="image" placeholder="https://..."></div>
+            <label><input type="checkbox" name="organic"> Organic verified</label>
+            <button class="primary-btn">List Product</button>
+          </form>
+        </section>
+        <section class="panel" id="analytics">
+          <h2>Sales Analytics</h2>
+          <div class="chart-bars">
+            <div class="bar"><span style="height:45%"></span><span>Mon</span></div>
+            <div class="bar"><span style="height:72%"></span><span>Tue</span></div>
+            <div class="bar"><span style="height:58%"></span><span>Wed</span></div>
+            <div class="bar"><span style="height:88%"></span><span>Thu</span></div>
+            <div class="bar"><span style="height:64%"></span><span>Fri</span></div>
+            <div class="bar"><span style="height:94%"></span><span>Sat</span></div>
+            <div class="bar"><span style="height:70%"></span><span>Sun</span></div>
+          </div>
+        </section>
+      </div>
+      <section class="panel" id="inventory" style="margin-top:22px">
+        <h2>Inventory</h2>
+        <div class="inventory-list" id="inventoryList"></div>
+      </section>
+    </section>
+  </main>
+  <script src="js/products.js"></script><script src="js/cart.js"></script><script src="js/auth.js"></script><script src="js/language.js"></script><script src="js/weather.js"></script><script src="js/dashboard.js"></script><script src="js/admin.js"></script><script src="js/app.js"></script>
+</body>
+</html>

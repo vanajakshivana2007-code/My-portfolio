@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyer Dashboard | RythuConnect</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav container"><a class="logo" href="index.html"><span class="logo-mark">RC</span> RythuConnect</a><div class="nav-links"><a href="marketplace.html">Marketplace</a><a href="cart.html">Cart</a><a href="orders.html">Orders</a></div><div class="nav-actions"><button class="icon-btn" id="darkToggle">Theme</button><button class="ghost-btn" onclick="logout()">Logout</button></div></nav></header>
+  <main class="dashboard-shell">
+    <aside class="sidebar"><a class="active" href="#overview">Overview</a><a href="#wishlist">Wishlist</a><a href="#tracker">Delivery</a><a href="weather.html">Prices</a></aside>
+    <section class="dashboard-main">
+      <div class="dashboard-header"><div><h1>Buyer Dashboard</h1><p class="muted">Hello, <span data-user-name>Buyer</span>. Track purchases and saved produce.</p></div><a class="primary-btn" href="marketplace.html">Buy Fresh Crops</a></div>
+      <div class="dashboard-grid" id="overview">
+        <article class="dashboard-card"><span>Cart Items</span><strong data-cart-count>0</strong></article>
+        <article class="dashboard-card"><span>Saved Farmers</span><strong>12</strong></article>
+        <article class="dashboard-card"><span>Delivered Orders</span><strong>24</strong></article>
+        <article class="dashboard-card"><span>Saved This Month</span><strong>Rs 1,850</strong></article>
+      </div>
+      <section class="panel" id="tracker" style="margin-top:22px">
+        <h2>Delivery Tracker</h2>
+        <div class="cards-grid" id="deliveryTracker"></div>
+      </section>
+      <section class="section" id="wishlist">
+        <div class="section-head"><div><h2>Wishlist</h2><p>Products saved from the marketplace appear here.</p></div></div>
+        <div class="cards-grid" id="wishlistGrid"></div>
+      </section>
+    </section>
+  </main>
+  <script src="js/products.js"></script><script src="js/cart.js"></script><script src="js/auth.js"></script><script src="js/language.js"></script><script src="js/weather.js"></script><script src="js/dashboard.js"></script><script src="js/admin.js"></script><script src="js/app.js"></script>
+</body>
+</html>

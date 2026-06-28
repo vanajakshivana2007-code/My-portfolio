@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather & Market Prices | RythuConnect</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav container"><a class="logo" href="index.html"><span class="logo-mark">RC</span> RythuConnect</a><div class="nav-links"><a href="marketplace.html">Marketplace</a><a href="farmer-dashboard.html">Farmers</a><a href="buyer-dashboard.html">Buyer</a></div><div class="nav-actions"><button class="icon-btn" id="darkToggle">Theme</button><a class="icon-btn" href="cart.html">Cart <span data-cart-count>0</span></a></div></nav></header>
+  <main>
+    <section class="page-hero"><div class="container page-title"><h1>Weather & Crop Prices</h1><p>Mock weather cards, rain alerts, and live-price style market intelligence.</p></div></section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><div><h2>District Weather</h2><p>Use OpenWeather API later; this version uses local mock data.</p></div></div>
+        <div class="weather-grid" id="weatherGrid"></div>
+      </div>
+    </section>
+    <section class="section alt">
+      <div class="container admin-grid">
+        <div class="panel">
+          <h2>Market Price Board</h2>
+          <div id="marketPrices"></div>
+        </div>
+        <div class="panel">
+          <h2>Interactive District Map</h2>
+          <div class="map-shell">
+            <span class="district" style="left:18%;top:42%">Guntur</span>
+            <span class="district" style="left:42%;top:28%">Vijayawada</span>
+            <span class="district" style="left:28%;top:68%">Kurnool</span>
+            <span class="district" style="left:62%;top:54%">Warangal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/products.js"></script><script src="js/cart.js"></script><script src="js/auth.js"></script><script src="js/language.js"></script><script src="js/weather.js"></script><script src="js/dashboard.js"></script><script src="js/admin.js"></script><script src="js/app.js"></script>
+</body>
+</html>

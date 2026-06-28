@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RythuConnect | Agriculture Marketplace</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html"><span class="logo-mark">RC</span> RythuConnect</a>
+      <button class="icon-btn menu-toggle" id="menuToggle" title="Menu">Menu</button>
+      <div class="nav-links" id="navLinks">
+        <a class="active" data-i18n="home" href="index.html">Home</a>
+        <a data-i18n="marketplace" href="marketplace.html">Marketplace</a>
+        <a data-i18n="farmers" href="farmer-dashboard.html">Farmers</a>
+        <a data-i18n="about" href="#about">About</a>
+      </div>
+      <div class="nav-actions">
+        <select id="languageSelect" title="Language">
+          <option value="english">EN</option>
+          <option value="telugu">TE</option>
+          <option value="hindi">HI</option>
+        </select>
+        <button class="icon-btn" id="darkToggle" title="Dark mode">Theme</button>
+        <a class="ghost-btn" data-i18n="login" href="login.html">Login</a>
+        <a class="primary-btn" data-i18n="register" href="register.html">Register</a>
+        <a class="icon-btn" href="cart.html" title="Cart">Cart <span data-cart-count>0</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Direct farmer marketplace</span>
+          <h1>Empowering Farmers, Delivering Freshness</h1>
+          <p>Buy directly from farmers without middlemen. Discover verified crops, live market prices, weather intelligence, and simple ordering in one agri-tech platform.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="marketplace.html">Explore Marketplace</a>
+            <a class="ghost-btn" href="farmer-dashboard.html">Farmer Dashboard</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <h2>Today's fresh arrivals</h2>
+          <p>Organic vegetables, grains, spices, and seasonal fruit from trusted local growers.</p>
+          <img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?auto=format&fit=crop&w=900&q=80" alt="Fresh produce basket">
+          <div class="mini-metrics">
+            <div><strong>18 min</strong><span>Avg. farmer response</span></div>
+            <div><strong>96%</strong><span>Verified listings</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container stats-grid">
+        <article class="stat-card"><strong data-counter="1250">0</strong><span>Farmers Joined</span></article>
+        <article class="stat-card"><strong data-counter="4820">0</strong><span>Crops Listed</span></article>
+        <article class="stat-card"><strong data-counter="18400">0</strong><span>Orders Delivered</span></article>
+        <article class="stat-card"><strong data-counter="42">0</strong><span>Districts Covered</span></article>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Featured Crops</h2>
+            <p>Dynamic product cards powered by mock data and localStorage cart actions.</p>
+          </div>
+          <a class="ghost-btn" href="marketplace.html">View All</a>
+        </div>
+        <div class="cards-grid" id="featuredProducts"></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container admin-grid">
+        <div class="panel">
+          <h2>Built for farmers and buyers</h2>
+          <p>RythuConnect gives farmers a clean storefront and gives customers transparent access to stock, prices, districts, and crop quality signals.</p>
+          <div class="button-row">
+            <a class="primary-btn" href="register.html">Create Account</a>
+            <a class="ghost-btn" href="weather.html">Check Weather</a>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Success Stories</h2>
+          <div class="story-card">
+            <p>"We listed tomatoes in the morning and received bulk buyer interest before lunch. The direct pricing helped our cooperative move stock faster."</p>
+            <h3>Lakshmi Farms</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><h3>RythuConnect</h3><p>Connecting Farmers Directly With Customers.</p></div>
+      <div><h3>Quick Links</h3><a href="marketplace.html">Marketplace</a><a href="weather.html">Weather</a><a href="orders.html">Orders</a></div>
+      <div><h3>Dashboards</h3><a href="farmer-dashboard.html">Farmer</a><a href="buyer-dashboard.html">Buyer</a><a href="admin-panel.html">Admin</a></div>
+      <div><h3>Newsletter</h3><form class="newsletter"><input placeholder="Email"><button class="primary-btn">Join</button></form></div>
+    </div>
+  </footer>
+
+  <details class="chatbot">
+    <summary>AI Crop Assistant</summary>
+    <div class="chat-window"><strong>Ask about crops</strong><p class="muted">Mock assistant: Tomatoes are trending in Vijayawada, while chilli prices are stable in Guntur.</p></div>
+  </details>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
